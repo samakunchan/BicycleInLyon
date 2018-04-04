@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="images/favicon-96x96.png">
+    <title>Bicycle in Lyon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header>
+    <h1>Bicycle in Lyon</h1>
+      <div id="entete">
+          <div id="infosRes0">
+              <h3>Vous avez réservé un vélo</h3>
+              <p id="address0"></p>
+          </div>
+          <div >
+              <h3 id="count0"></h3>
+          </div>
+      </div>
+  </header>
+    <!-- Section du slider -->
+  <section id="contenuSlider">
+    <div id="container" style="width: 400%; position: relative; margin: 0px; padding: 0px; left: 0px; top: 0px; transform: translate(0%); transition-duration: 1s;">
+      <img src="images/usewelcome.jpg" alt="Image de bienvenue"><!--
+      --><img src="images/usemap.jpg" alt="Utiliser la map"><!--
+      --><img src="images/useform.jpg" alt="La réservation"><!--
+      --><img src="images/usevalid.jpg" alt="La validation">
+    </div>
+      <input type="submit" id="pause" value="Pause">
+      <input type="submit" id="play" value="Play">
+    <nav id="gestionBouton">
+      <button id="bouton1">BIENVENUE</button>
+      <button id="bouton2">Utiliser la map</button>
+      <button id="bouton3">Reservation</button>
+      <button id="bouton4">Valider</button>
+    </nav>
+  </section>
+    <!-- Section Map intéractif -->
+  <section id="mapContent">
+    <button id="resizeMap"> Aggrandir la map</button>
+    <button id="nouvelleRes"> Nouvelle réservation</button>
+    <div id="map" style="width: 100%; height: 590px;"></div>
+  </section>
+    <!-- Section légende sur les icones de la map -->
+  <section id="legende">
+    <figure>
+      <img src="images/velovert.png" alt="Station ouverte">
+      <figcaption>Station ouverte</figcaption>
+      <figcaption>Vélo diponible</figcaption>
+    </figure>
+    <figure>
+      <img src="images/velogris.png" alt="Station ouverte sans vélo">
+      <figcaption>Station ouverte </figcaption>
+      <figcaption>Vélo épuisé </figcaption>
+    </figure>
+    <figure>
+      <img src="images/closed1.png" alt="Station fermé">
+      <figcaption>Station fermé</figcaption>
+    </figure>
+  </section>
+    <!-- Section informations des stations + la signature-->
+  <section id="reservationContent">
+      <h1>Réservation</h1>
+      <em id="choice">Veuillez cliquer une station afin d'avoir plus d'informations.</em>
+      <div id="reservation">
+        <div id="allInfos">
+            <p id="stationCommune"></p>
+            <p id="stationName"></p>
+            <p id="stationStatus"></p>
+            <p id="stationAddress"></p>
+            <p id="stationT"></p>
+            <p id="stationA"></p>
+            <button id="reserverChoice">Choisir cette station</button>
+        </div>
+        <div id="canvasDiv">
+            <h3>Cadre de signature ci-dessous</h3>
+            <canvas id="canvas" style="width: 100%; height: auto"></canvas>
+            <nav id="option">
+                <div>
+                    <button id="clear">Clear</button>
+                </div>
+                <div>
+                    <button id="reserver">Reserver</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+  </section>
+    <!-- Section popup de la boitde de dialogue "Alert" -->
+  <section id="gestionAlert">
+      <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+          <div id="dialogboxhead"></div>
+          <div id="dialogboxbody"></div>
+          <div id="dialogboxfoot"></div>
+      </div>
+  </section>
+  <!-- Section du compteur -->
+  <section id="compteur">
+        <div id="timing">
+            <div id="count"></div>
+            <input type="submit" value="annuler" id="annuler">
+        </div>
+        <div id="infosRes">
+            <div>
+                <h3>Station</h3>
+                <p id="station"></p>
+            </div>
+            <div>
+                <h3>Addresse</h3>
+                <p id="address"></p>
+            </div>
+        </div>
+  </section>
+  <footer>
+      <span>&copy; Samakunchan</span>
+      <span>Cette application a été créé dans le cadre du programme Développeur Web Junior sur OpenClassrooms.</span>
+      <span>
+          <a href="https://data.grandlyon.com/equipements/station-vflov-disponibilitfs-temps-rfel/">Cliquer pour avoir la provenance des données</a>
+      </span>
+  </footer>
+  <script src="js/ajax.js"></script>
+  <script src="js/allObjects.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/signature.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbTOvW4GFIuLkDOEdvqyIK2fvmfuYVhKI&" async defer></script>
+  <script src="js/markerclusterer.js"></script>
+</body>
+</html>
+

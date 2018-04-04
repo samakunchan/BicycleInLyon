@@ -1,0 +1,11 @@
+document.getElementById('container').style.transform = "translateX(0%)";
+var slider = Object.create(SliderObject);
+document.addEventListener("keydown", slider.imgAnim);
+document.addEventListener("keydown", slider.buttonAnim);
+document.getElementById('bouton1').addEventListener("click", slider.clicBouton1);
+document.getElementById('bouton2').addEventListener("click", slider.clicBouton2);
+document.getElementById('bouton3').addEventListener("click", slider.clicBouton3);
+document.getElementById('bouton4').addEventListener("click", slider.clicBouton4);
+document.getElementById("play").addEventListener("click", slider.play);
+document.getElementById("pause").addEventListener("click", slider.pause);
+setInterval(slider.sliderAuto, 8000);

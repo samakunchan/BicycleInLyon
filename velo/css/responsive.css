@@ -1,0 +1,16 @@
+@media screen and (max-width: 1280px) {
+    #controller{
+        position: relative;
+        top: -80px;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header, #contenuSlider, #mapContent, #legende, #reservationContent, #gestionAlert, #compteur{
+        font-size: 30px;
+    }
+    #reservation{
+        display: block;
+    }
+}
